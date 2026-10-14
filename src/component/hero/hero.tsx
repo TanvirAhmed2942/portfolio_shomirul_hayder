@@ -43,7 +43,7 @@ export default function Hero() {
                 sm:px-10 sm:pt-32
                 flex flex-col items-start
                 md:absolute md:top-0 md:left-0 md:h-full
-                md:w-[60vw] md:pl-[3.5vw] md:pr-[2vw]
+                md:w-[64vw] md:pl-[3.5vw] md:pr-[2vw]
                 md:pt-0 md:pb-0 md:justify-center"
       >
         <h1
@@ -56,7 +56,7 @@ export default function Hero() {
           className={`${serif.className} text-sm sm:text-xl md:text-[1.4vw] leading-snug text-zinc-900`}
         >
           Brand Development Specialist | Digital Marketing Strategist | Content
-          Writer | Social Media Manager
+          Writer | Social Media Manager | Email Marketing Specialist
         </p>
       </div>
 

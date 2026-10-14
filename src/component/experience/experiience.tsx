@@ -3,31 +3,49 @@ import Image from "next/image";
 export default function Experience() {
   const experiences = [
     {
-      serial: 3,
-      title: "Content Writer",
-      company: "CodeZen",
+      serial: 1,
+      title: "Product Marketing Executive",
+      company: "CodeZen Technologies Limited",
       companyLogo: "/codezen.svg",
-      duration: "Jan 2020 - Present",
+      duration: "Oct 2025 - Present",
       description:
-        "Developed and maintained web applications using React and Node.js.",
+        "My current role as a Product Marketing Executive, is to work on understanding product features, communicating their value to the target audience, placing the product in the market, and creating content that supports product positioning and promotion. I collaborate with different teams to align marketing activities with business goals and improve product visibility across digital channels.",
     },
     {
       serial: 2,
-      title: "Email Marketing Specialist",
-      company: "CodeZen",
+      title: "Junior Executive - Digital Marketing",
+      company: "CodeZen Technologies Limited",
       companyLogo: "/codezen.svg",
-      duration: "Mar 2018 - Dec 2019",
+      duration: "Jan 2025 - Oct 2026",
       description:
-        "Implemented responsive UI components and optimized performance for web applications.",
+        "In my role as a Digital Marketer, my work was a combination of SEO optimization, work on increasing brand visibility, email marketing and social media marketing. I worked with several teams to increase brand visibility for 5 brands, and reviewed 100+ blogs and product descriptions.",
     },
     {
-      serial: 1,
-      title: "Brand Manager",
-      company: "CodeZen",
+      serial: 3,
+      title: "Email Marketing Specialist",
+      company: "CodeZen Technologies Limited",
       companyLogo: "/codezen.svg",
-      duration: "Jan 2016 - Feb 2018",
+      duration: "Jan 2025 - Oct 2026",
       description:
-        "Collaborated with cross-functional teams to define project requirements and deliver high-quality software solutions.",
+        "I have been designing emails (copy, subject line, preview line, A/B testing, templates) that represent the brand. My email marketing work has contributed to over £50,000+ in sales in 1.5+ years of time. I have created several automation workflows depending on user behavior and managed audience segments.",
+    },
+    {
+      serial: 4,
+      title: "Blogger",
+      company: "CodeZen Technologies Limited",
+      companyLogo: "/codezen.svg",
+      duration: "Dec 2024 - Mar 2025",
+      description:
+        "As a Blogger on the Digital Marketing Team, I wrote SEO-optimized blogs through competitor analysis and independent research. I also created guest posts, with several blogs ranking #1 on Google. After updating older content, some of my blogs were also featured in Google's AI Overviews.",
+    },
+    {
+      serial: 5,
+      title: "Content Writer",
+      company: "CodeZen Technologies Limited",
+      companyLogo: "/codezen.svg",
+      duration: "Oct 2024 - Dec 2024",
+      description:
+        "My role as a content writer was to research competitors, develop course content, and created unique courses through independent research. I also collaborated with the creative design team to align content with visual designs.",
     },
   ];
 
@@ -47,51 +65,49 @@ export default function Experience() {
         </h1>
 
         <div className="mt-8 md:mt-12 flex flex-col items-start gap-6">
-          {experiences
-            .map((experience) => (
-              <div
-                key={experience.serial}
-                className="w-full max-w-4xl p-6 sm:p-8 md:p-10 bg-zinc-50 rounded-lg shadow-md"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <Image
-                    src={experience.companyLogo}
-                    alt={`${experience.company} logo`}
-                    width={64}
-                    height={64}
-                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-contain shrink-0 bg-black p-1"
-                  />
-                  <div className="min-w-0">
-                    <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
-                      {experience.title}
-                    </h2>
-                    <p className="text-sm sm:text-base text-zinc-600">
-                      {experience.company}
-                    </p>
-                  </div>
-                  <span className="ml-auto text-3xl sm:text-5xl font-black text-zinc-200">
-                    {String(experience.serial).padStart(2, "0")}
-                  </span>
+          {experiences.map((experience) => (
+            <div
+              key={experience.serial}
+              className="w-full max-w-4xl p-6 sm:p-8 md:p-10 bg-zinc-50 rounded-lg shadow-md"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <Image
+                  src={experience.companyLogo}
+                  alt={`${experience.company} logo`}
+                  width={64}
+                  height={64}
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-contain shrink-0 bg-black p-1"
+                />
+                <div className="min-w-0">
+                  <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                    {experience.title}
+                  </h2>
+                  <p className="text-sm sm:text-base text-zinc-600">
+                    {experience.company}
+                  </p>
                 </div>
-
-                <p className="text-xs sm:text-sm font-medium text-zinc-500 mb-2">
-                  {experience.duration}
-                </p>
-                <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
-                  {experience.description}
-                </p>
+                <span className="ml-auto text-3xl sm:text-5xl font-black text-zinc-200">
+                  {String(experience.serial).padStart(2, "0")}
+                </span>
               </div>
-            ))
-            .reverse()}
+
+              <p className="text-xs sm:text-sm font-medium text-zinc-500 mb-2">
+                {experience.duration}
+              </p>
+              <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
+                {experience.description}
+              </p>
+            </div>
+          ))}
         </div>
 
-        <Image
+        {/* <Image
           src="/path3.svg"
           alt="Next.js logo"
           width={2500}
           height={2500}
           className="absolute inset-0 w-full h-full object-cover opacity-50"
-        />
+        /> */}
       </div>
     </section>
   );
